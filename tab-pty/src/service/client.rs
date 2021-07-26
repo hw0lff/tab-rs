@@ -84,7 +84,7 @@ impl ClientService {
                             let home = history_path("zsh", create.name.as_str())?;
                             std::fs::create_dir_all(home.parent().unwrap())?;
 
-                            env.insert("HISTFILE".to_string(), home.to_string_lossy().to_string());
+                            // env.insert("HISTFILE".to_string(), home.to_string_lossy().to_string());
                         }
                         Shell::Bash => {
                             let home = history_path("bash", create.name.as_str())?;
